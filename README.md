@@ -10,5 +10,5 @@ YOLO:https://github.com/leggedrobotics/darknet_ros.git
 別にこのバージョンでなくてもいい．
 いくつかエラーが出たら，~~を参考にして直す
 
-
+bebop_slam_relatedはまた今度
 
