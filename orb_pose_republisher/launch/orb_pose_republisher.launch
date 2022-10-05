@@ -1,0 +1,19 @@
+<launch>
+    <!-- Parameters-->
+    <arg name="result_path" default="/home/dars/catkin_ws/src/bebop_data"/>
+    <arg name="update_transform" default="false"/>
+    <arg name="scaling_factor" default="3.6"/>
+    <arg name="orb_topic" default="/orb_slam2_mono/pose"/>
+    <arg name="ar_topic" default="/ar_pose_marker"/>
+    <arg name="pose_topic" default="bebop/true_pose"/>
+
+    <node pkg="orb_pose_republisher" type="orb2_pose_republisher" name="orb2_pose_republisher" output="screen">
+        <param name="result_path" value="$(arg result_path)"/>
+        <param name="update_transform" value="$(arg update_transform)"/>
+        <param name="scaling_factor" value="$(arg scaling_factor)"/>
+        <param name="orb_topic" value="$(arg orb_topic)"/>
+        <param name="ar_topic" value="$(arg ar_topic)"/>
+        <param name="pose_topic" value="$(arg pose_topic)"/>
+    </node>
+
+</launch>
