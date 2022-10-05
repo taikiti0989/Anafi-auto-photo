@@ -1,0 +1,10 @@
+<launch>
+    <group ns = "moverio">
+        <node pkg="marker_util" type="cam_pose_using_multi_ar_markers" name="cam_pose_using_multi_ar_markers" output="screen">
+            <!-- subscibed topics -->
+            <remap from="/ar_pose_marker" to="/moverio/ar_pose_marker"/>
+            <!-- published topics -->
+            <remap from="/marker_pose" to="/moverio/marker_pose"/>
+        </node>
+    </group>
+</launch>
