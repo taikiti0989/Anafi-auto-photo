@@ -1,0 +1,11 @@
+<launch>
+    <arg name="cam_image_topic" default="camera/image_raw" />
+    <arg name="cam_info_topic" default="camera/camera_info" />
+    
+    <node name="ar_track_alvar" pkg="ar_track_alvar" type="individualMarkersNoKinect" respawn="false" output="screen">
+        <rosparam command="load" file="$(find olympe_bridge)/param/alvar.yaml" />
+        
+        <remap from="camera_image" to="/anafi/image" />
+        <remap from="camera_info" to="/anafi/camera_info" />
+    </node>
+</launch>

@@ -1,0 +1,4 @@
+<launch>
+<include file="$(find orb_slam2_ros)/ros/launch/bebop.launch"/>
+<include file="$(find olympe_bridge)/launch/ar_bebop.launch"/>
+</launch>
